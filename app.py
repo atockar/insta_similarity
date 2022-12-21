@@ -13,11 +13,9 @@ st.set_page_config(
 )
 
 bot = instaloader.Instaloader()
+bot.login(st.secrets["instaUser"],st.secrets["instaPw"])
 
 st.header('Instagram image similarity checker')
-
-# sydney.karate
-# karatenutrition
 
 def create_card(profile):
     bot.download_profilepic(profile)
